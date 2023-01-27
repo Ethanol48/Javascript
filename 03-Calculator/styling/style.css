@@ -1,0 +1,86 @@
+body {
+  background-color: hsl(217, 7%, 22%);
+  display: box;
+  font-family: sans-serif;
+  margin: 10% 10%;
+}
+
+header {
+ margin-bottom: 5px;
+}
+
+.container {
+  background-color: rgb(82, 85, 85);
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 24rem;
+  max-width: 24rem;
+  margin-left: 3.5rem;
+
+}
+
+.texto {
+  min-width: 26rem;
+  max-width: 26rem;
+  margin-left: 3.5rem;
+  margin-bottom: 2rem;
+
+  background-color: rgb(255, 179, 66);
+  border-radius: 1rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  font-style: italic;
+  font-size: small;
+}
+
+.display {
+  background-color: hsl(0, 0%, 90%);
+  border: 1px solid hsl(0, 0%, 93%);
+  border-radius: 5px;
+  color: hsl(60, 10%, 19%);
+  font-size: 2rem;
+  font-weight: 700;
+  height: 50px;
+  margin: 5px;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  text-align: left;
+  max-width: 20.5rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: hsl(45, 7%, 89%);
+  border: 1px solid hsl(35, 11%, 61%);
+  border-radius: 5px;
+  color: hsl(60, 10%, 19%);
+  font-size: 1.7rem;
+  font-weight: 700;
+  height: 5rem;
+  margin: 5px;
+  width:  5rem;
+}
+.button--number:hover {
+  background-color: hsl(20, 2%, 65%);
+
+}
+
+.button--operator {
+  background-color: hsl(26, 93%, 60%);
+  color: #000;
+}
+
+.button--operator:hover {
+  background-color: hsl(26, 93%, 70%);
+}
+
+.first--row {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.cero {
+  width: 10.9rem;
+}
