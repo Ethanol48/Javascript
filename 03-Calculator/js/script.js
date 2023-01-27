@@ -1,26 +1,87 @@
-num0 = document.getElementById("0");
-num1 = document.getElementById("1");
-num2 = document.getElementById("2");
-num3 = document.getElementById("3");
-num4 = document.getElementById("4");
-num5 = document.getElementById("5");
-num6 = document.getElementById("6");
-num7 = document.getElementById("7");
-num8 = document.getElementById("8");
-num9 = document.getElementById("9");
-plus = document.getElementById("plus");
-minus = document.getElementById("minus");
-multiply = document.getElementById("mult");
-divide = document.getElementById("divide");
-equals = document.getElementById("equal");
-clear = document.getElementById("clear");
-
-
 display = document.querySelector(".display__input");
+
+const array = ["AC", "C", "/", "*", "-", "+", "="];
+const operators = ["/", "*", "-", "+"];
+
+let var1 = 0;
+let ope;
+let var2 = 0;
+
+function handleOperation(operator) {
+  var1 = parseInt(display.innerHTML);
+  display.innerHTML = "0";
+
+  switch (operator) {
+    case "/":
+      ope = "/";
+      break
+
+    case "*":
+      ope = "mult";
+      console.log("multiplication1")
+      break
+
+    case "-":
+      ope = "-";
+      break
+
+    case "+":
+      ope = "+";
+      break
+}
+}
 
 function for_display(num) {
 
-  if (num.innerText === "0") {
+  if (num.innerText === "=") {
+    var2 = parseInt(display.innerHTML);
+
+    console.log(var1, ope, var2)
+
+    switch (ope) {
+
+      case "/":
+        console.log("division")
+        display.innerHTML = var1 / var2;
+        break
+
+      case "mult":
+        console.log("multiplication2")
+        display.innerHTML = var1*var2;
+        break
+
+      case "-":
+        console.log("soustraction")
+        display.innerHTML = var1 - var2;
+        break
+
+      case "+":
+        console.log("addition")
+        display.innerHTML = var1 + var2;
+        break
+    }
+  }
+
+  if (array.includes(num.innerText)) {
+
+    if (operators.includes(num.innerText)) {
+      handleOperation(num.innerText);
+
+    } else {
+
+      switch (num.innerText) {
+        case "AC":
+          display.innerHTML = "0";
+          var1 = 0;
+          ope = "";
+          var2 = 0;
+
+        case "C":
+          display.innerHTML = "0";
+      }
+    }
+
+  } else if (num.innerText === "0") {
     if (display.innerHTML === "0") {
       display.innerHTML = "0";
     } else {
@@ -36,49 +97,14 @@ function for_display(num) {
   }
 }
 
+const wrapper = document.querySelector('.buttons');
 
+wrapper.addEventListener('click', (event) => {
+  const isButton = event.target.nodeName === 'BUTTON';
+  if (!isButton) {
+    return;
+  }
 
-clear.addEventListener("click", function() {
-  display.innerHTML = "0";
-});
-
-num0.addEventListener("click", function() {
-  for_display(num0);
+  for_display(event.target);
 
 })
-
-num1.addEventListener("click", function() {
-  for_display(num1);
-});
-
-num2.addEventListener("click", function() {
-  for_display(num2);
-});
-
-num3.addEventListener("click", function() {
-  for_display(num3);
-});
-
-num4.addEventListener("click", function() {
-  for_display(num4);
-});
-
-num5.addEventListener("click", function() {
-  for_display(num5);
-});
-
-num6.addEventListener("click", function() {
-  for_display(num6);
-});
-
-num7.addEventListener("click", function() {
-  for_display(num7);
-});
-
-num8.addEventListener("click", function() {
-  for_display(num8);
-});
-
-num9.addEventListener("click", function() {
-  for_display(num9);
-});
