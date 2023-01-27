@@ -65,6 +65,10 @@ header {
   background-color: hsl(20, 2%, 65%);
 
 }
+.button--clear:hover {
+  background-color: hsl(20, 2%, 65%);
+
+}
 
 .button--operator {
   background-color: hsl(26, 93%, 60%);

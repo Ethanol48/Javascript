@@ -1,14 +1,13 @@
 const button = document.querySelector('button')
 const body = document.querySelector('body')
 
-index = 0
-
 body.style.backgroundColor = 'lightskyblue';
 
+index = 0
 
 TextoHover = () => {
   if (index === 0) {
-    button.style.color = '#f7f7f7' 
+    button.style.color = '#f7f7f7'
 
   } else if (index === 1) {
     button.style.color = '#f7f7f7'
@@ -18,7 +17,7 @@ TextoHover = () => {
 TextoHoverInv = () => {
   if (index === 0) {
     button.style.color = '#333333'
-  
+
   } else if (index === 1) {
     button.style.color = 'lightskyblue'
   }
@@ -30,7 +29,7 @@ Cambiatodo = () => {
     body.style.backgroundColor = '#f7f7f7'
     button.style.backgroundColor = 'lightskyblue';
     // button.style.color = 'lightskyblue'
-  
+
     index = 1
 
   } else {
