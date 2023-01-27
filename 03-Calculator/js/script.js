@@ -8,11 +8,11 @@ num6 = document.getElementById("6");
 num7 = document.getElementById("7");
 num8 = document.getElementById("8");
 num9 = document.getElementById("9");
-numPlus = document.getElementById("plus");
-numMinus = document.getElementById("minus");
-numMultiply = document.getElementById("mult");
-numDivide = document.getElementById("divide");
-numEquals = document.getElementById("equal");
+plus = document.getElementById("plus");
+minus = document.getElementById("minus");
+multiply = document.getElementById("mult");
+divide = document.getElementById("divide");
+equals = document.getElementById("equal");
 clear = document.getElementById("clear");
 
 
