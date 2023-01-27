@@ -1,11 +1,13 @@
 display = document.querySelector(".display__input");
 
-const array = ["AC", "C", "/", "*", "-", "+", "="];
+const symbols = ["AC", "C", "/", "*", "-", "+", "="];
 const operators = ["/", "*", "-", "+"];
 
 let var1 = 0;
 let ope;
 let var2 = 0;
+
+equal = false;
 
 function handleOperation(operator) {
   var1 = parseInt(display.innerHTML);
@@ -17,8 +19,7 @@ function handleOperation(operator) {
       break
 
     case "*":
-      ope = "mult";
-      console.log("multiplication1")
+      ope = "*";
       break
 
     case "-":
@@ -28,58 +29,64 @@ function handleOperation(operator) {
     case "+":
       ope = "+";
       break
+  }
 }
-}
+
 
 function for_display(num) {
 
   if (num.innerText === "=") {
-    var2 = parseInt(display.innerHTML);
 
-    console.log(var1, ope, var2)
+    if (equal === false) {
+      var2 = parseInt(display.innerHTML);
+    }
+
+    console.log("pre operation", var1, ope, var2);
 
     switch (ope) {
 
       case "/":
-        console.log("division")
         display.innerHTML = var1 / var2;
         break
 
-      case "mult":
-        console.log("multiplication2")
+      case "*":
         display.innerHTML = var1*var2;
         break
 
       case "-":
-        console.log("soustraction")
         display.innerHTML = var1 - var2;
         break
 
       case "+":
-        console.log("addition")
         display.innerHTML = var1 + var2;
         break
     }
+
+
+    var1 = parseInt(display.innerHTML);
+
+    console.log("post operation", var1, ope, var2)
+
   }
 
-  if (array.includes(num.innerText)) {
+  if (symbols.includes(num.innerText)) {
 
     if (operators.includes(num.innerText)) {
       handleOperation(num.innerText);
 
     } else {
-
       switch (num.innerText) {
         case "AC":
           display.innerHTML = "0";
           var1 = 0;
           ope = "";
           var2 = 0;
-
         case "C":
           display.innerHTML = "0";
       }
     }
+
+    history = (var1 + ope + var2)
 
   } else if (num.innerText === "0") {
     if (display.innerHTML === "0") {
@@ -105,6 +112,14 @@ wrapper.addEventListener('click', (event) => {
     return;
   }
 
+  if (event.target.innerText !== "=") {
+    equal = false;
+  }
+
   for_display(event.target);
+
+  if (event.target.innerText === "=") {
+    equal = true;
+  }
 
 })
