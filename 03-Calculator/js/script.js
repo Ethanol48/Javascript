@@ -1,3 +1,5 @@
+// TODO fix bug, add "end of operation"
+
 display = document.querySelector(".display__input");
 
 const symbols = ["AC", "C", "/", "*", "-", "+", "="];
@@ -86,9 +88,9 @@ function for_display(num) {
       }
     }
 
-    history = (var1 + ope + var2)
 
   } else if (num.innerText === "0") {
+
     if (display.innerHTML === "0") {
       display.innerHTML = "0";
     } else {
@@ -96,6 +98,7 @@ function for_display(num) {
     }
 
   } else {
+
     if (display.innerHTML === "0") {
       display.innerHTML = num.innerText;
     } else {

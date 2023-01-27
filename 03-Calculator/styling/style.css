@@ -80,7 +80,10 @@ header {
   justify-content: space-between;
   margin-right: 10px;
 }
-
 .double {
   width: 10.9rem;
+}
+
+.cero {
+  width: 16.8rem;
 }
