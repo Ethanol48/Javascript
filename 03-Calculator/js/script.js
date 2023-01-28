@@ -12,7 +12,7 @@ let var2 = 0;
 equal = false;
 
 function handleOperation(operator) {
-  var1 = parseInt(display.innerHTML);
+  var1 = parseFloat(display.innerHTML);
   display.innerHTML = "0";
 
   switch (operator) {
@@ -40,10 +40,10 @@ function for_display(num) {
   if (num.innerText === "=") {
 
     if (equal === false) {
-      var2 = parseInt(display.innerHTML);
+      var2 = parseFloat(display.innerHTML);
     }
 
-    console.log("pre operation", var1, ope, var2);
+    // console.log("pre operation", var1, ope, var2);
 
     switch (ope) {
 
@@ -65,9 +65,9 @@ function for_display(num) {
     }
 
 
-    var1 = parseInt(display.innerHTML);
+    var1 = parseFloat(display.innerHTML);
 
-    console.log("post operation", var1, ope, var2)
+    // console.log("post operation", var1, ope, var2)
 
   }
 
