@@ -15,14 +15,14 @@ header {
   padding: 1rem;
   min-width: 24rem;
   max-width: 24rem;
-  margin-left: 3.5rem;
+  /* margin-left: 3.5rem; */
 
 }
 
 .texto {
   min-width: 26rem;
   max-width: 26rem;
-  margin-left: 3.5rem;
+  margin-left: 2rem;
   margin-bottom: 2rem;
 
   background-color: rgb(255, 179, 66);
@@ -90,4 +90,32 @@ header {
 
 .cero {
   width: 16.8rem;
+}
+
+
+.grid {
+  display: grid;
+  background-color: aqua;
+  background: aqua;
+  border-radius: 10px;
+  margin: 20px 8px 0px 35px;
+
+  margin-top: 4rem;
+}
+
+.outer, .container {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: -1rem;
+}
+
+.container {
+  margin-bottom: 0.3rem;
+  margin-left: -0.3rem;
+}
+
+.outer{
+  background-color: rgb(40, 38, 38);
+  border-radius: 10px;
+
 }

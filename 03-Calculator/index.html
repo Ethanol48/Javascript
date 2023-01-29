@@ -7,48 +7,55 @@
     <link rel="stylesheet" href="styling/style.css">
     <title>Calculator</title>
   </head>
+
   <body>
     <header>
-        <div class="texto">
-          <h1>Super Calculator !!</h1>
-        </div>
+      <div class="texto">
+        <h1>Super Calculator !!</h1>
+      </div>
     </header>
-    <div class="container">
-      <div class="calculator">
-        <div class="display">
-          <div class="display__input">0</div>
+    <div class="grid">
+      <div class="outer">f </div>
+      <div class="container">
+        <div class="calculator">
+          <div class="display">
+            <div class="display__input">0</div>
+          </div>
+          <div class="buttons">
+            <div class="buttons__row first--row">
+              <button class="button button--clear" id="allClear">AC</button>
+              <button class="button button--clear" id="clear">C</button>
+              <button class="button button--operator double" id="divide">/</button>
+            </div>
+            <div class="buttons__row">
+              <button class="button button--number" id="7">7</button>
+              <button class="button button--number" id="8">8</button>
+              <button class="button button--number" id="9">9</button>
+              <button class="button button--operator" id="mult">*</button>
+            </div>
+            <div class="buttons__row">
+              <button class="button button--number" id="4">4</button>
+              <button class="button button--number" id="5">5</button>
+              <button class="button button--number" id="6">6</button>
+              <button class="button button--operator" id="minus">-</button>
+            </div>
+            <div class="buttons__row">
+              <button class="button button--number" id="1">1</button>
+              <button class="button button--number" id="2">2</button>
+              <button class="button button--number" id="3">3</button>
+              <button class="button button--operator" id="plus">+</button>
+            </div>
+            <div class="buttons__row">
+              <button class="button button--number double cero" id="0">0</button>
+              <button class="button button--operator" id="equal">=</button>
+            </div>
+          </div>
         </div>
-        <div class="buttons">
-          <div class="buttons__row first--row">
-            <button class="button button--clear" id="allClear">AC</button>
-            <button class="button button--clear" id="clear">C</button>
-            <button class="button button--operator double" id="divide">/</button>
-          </div>
-          <div class="buttons__row">
-            <button class="button button--number" id="7">7</button>
-            <button class="button button--number" id="8">8</button>
-            <button class="button button--number" id="9">9</button>
-            <button class="button button--operator" id="mult">*</button>
-          </div>
-          <div class="buttons__row">
-            <button class="button button--number" id="4">4</button>
-            <button class="button button--number" id="5">5</button>
-            <button class="button button--number" id="6">6</button>
-            <button class="button button--operator" id="minus">-</button>
-          </div>
-          <div class="buttons__row">
-            <button class="button button--number" id="1">1</button>
-            <button class="button button--number" id="2">2</button>
-            <button class="button button--number" id="3">3</button>
-            <button class="button button--operator" id="plus">+</button>
-          </div>
-          <div class="buttons__row">
-            <button class="button button--number double cero" id="0">0</button>
-            <button class="button button--operator" id="equal">=</button>
-          </div>
         </div>
       </div>
     </div>
+
     <script src="js/script.js"></script>
   </body>
-</html>
+
+  </html>
