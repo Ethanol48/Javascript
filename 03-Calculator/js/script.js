@@ -1,6 +1,4 @@
-// TODO fix bug, add "end of operation"
-
-display = document.querySelector(".display__input");
+;display = document.querySelector(".display__input");
 
 const symbols = ["AC", "C", "/", "*", "-", "+", "="];
 const operators = ["/", "*", "-", "+"];
@@ -43,7 +41,7 @@ function for_display(num) {
       var2 = parseFloat(display.innerHTML);
     }
 
-    // console.log("pre operation", var1, ope, var2);
+    console.log("pre operation", var1, ope, var2);
 
     switch (ope) {
 
@@ -67,7 +65,7 @@ function for_display(num) {
 
     var1 = parseFloat(display.innerHTML);
 
-    // console.log("post operation", var1, ope, var2)
+    console.log("post operation", var1, ope, var2)
 
   }
 
@@ -91,6 +89,15 @@ function for_display(num) {
 
   } else if (num.innerText === "0") {
 
+    if (equal === true) {
+      equal = false;    // set the variable equal to false
+      var1 = 0;         // set the variable var1 to 0
+      var2 = 0;         // set the variable var2 to 0
+      ope = "";         // set the variable ope to ""
+
+      display.innerHTML = "0"; // set the display to 0
+    }
+
     if (display.innerHTML === "0") {
       display.innerHTML = "0";
     } else {
@@ -98,6 +105,19 @@ function for_display(num) {
     }
 
   } else {
+    console.log("lknflaknflaknflanflkanlkf");
+
+
+    if (equal === true) {
+      display.innerHTML = "0";
+
+      equal = false;    // set the variable equal to false
+      var1 = 0;         // set the variable var1 to 0
+      var2 = 0;         // set the variable var2 to 0
+      ope = "";         // set the variable ope to ""
+
+ // set the display to 0
+    }
 
     if (display.innerHTML === "0") {
       display.innerHTML = num.innerText;
@@ -115,14 +135,19 @@ wrapper.addEventListener('click', (event) => {
     return;
   }
 
-  if (event.target.innerText !== "=") {
-    equal = false;
-  }
+
 
   for_display(event.target);
 
   if (event.target.innerText === "=") {
     equal = true;
+  }
+
+  // console.log("valor real", event.target.innerText);
+  // console.log("testear igual", equal);
+
+  if (event.target.innerText !== "=") {
+    equal = false;
   }
 
 })
