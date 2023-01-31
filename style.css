@@ -26,7 +26,7 @@ a:hover {
 }
 
 
-ul {
+.list-links {
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -55,11 +55,19 @@ li {
   font-family: Solitreo;
   color: rgba(255, 216, 1, 1);
   transition: font-size 1.7s;
+  padding-left: 1rem;
 
 }
 
 .container-proj {
   margin-top: 4rem;
+}
+
+.subrayado {
+  margin-top: -1.6rem; 
+  font-weight: bold; 
+  font-size: 25.5px; 
+  color: rgba(255, 216, 21, 1);
 }
 
 /* .links-to { */
