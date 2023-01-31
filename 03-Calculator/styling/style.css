@@ -6,7 +6,9 @@ body {
 }
 
 header {
- margin-bottom: 5px;
+  margin-bottom: 5px;
+  display: grid;
+  justify-content: center;
 }
 
 .container {
@@ -23,7 +25,8 @@ header {
   min-width: 26rem;
   max-width: 26rem;
   margin-left: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
+
 
   background-color: rgb(255, 179, 66);
   border-radius: 1rem;
@@ -95,11 +98,11 @@ header {
 
 .grid {
   display: grid;
-  background-color: aqua;
-  background: aqua;
+  /* background-color: aqua; */
+  /* background: aqua; */
   border-radius: 10px;
   margin: 20px 8px 0px 35px;
-
+  justify-content: center;
   margin-top: 4rem;
 }
 
@@ -117,5 +120,7 @@ header {
 .outer{
   background-color: rgb(40, 38, 38);
   border-radius: 10px;
+  min-width: 26rem;
+  max-width: 26rem;
 
 }
